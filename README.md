@@ -1,5 +1,8 @@
 # Names_Sentences_Generator
 
+Language: Python
+Authors : EL HAJJAJI Adil, HABANS Paul
+
 This code is inspired from The Coding Train channel : https://youtu.be/eGFJ8vugIWA?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
 
 You can modify it according to your needs.
