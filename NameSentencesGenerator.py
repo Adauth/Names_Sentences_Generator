@@ -5,7 +5,7 @@ TOU CAN GENERATE A TEXT OR NAMES IN FUNCTION OF A ORIGINAL ONE
 
 Author:EL HAJJAJI Adil
 Date:10/17/2019
-Version:1.0.0
+Version:1.0.1
 
 code inspired from The Coding Train channel : https://youtu.be/eGFJ8vugIWA?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH
 
@@ -32,10 +32,11 @@ with open('D:\EPSI\Python\TP_1\communes-01012019.csv', encoding="UTF-8") as csvf
         listeA = ""
         for colonnes in reader:
                 
-                listeNom = colonnes["libelle"]
+                listeNom = colonnes["ncc"]
                 nomsVilles.append(listeNom)
                 txt = txt + listeNom
                 txt = txt + " "
+                
 
 for i in range(0,len(txt) - (ordre - 1)):#get the n-grams in function of the order
     gram = txt[i:i+ordre]
@@ -52,6 +53,8 @@ for ville in nomsVilles:
     debut.append(ville[0:ordre])#get all the first n-garms of each town in the list
 
 currentGram = random.choice(debut)
+#currentGram = txt[0:ordre] This line is useful to generate a sentence: It takes the first n-gram of the original sentence
+
 result = currentGram #For my use, randomly get the beginning of the generated word.
                     #Else you can put the word or syllabe you want to begin with 
 
